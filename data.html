@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var data = [17627.79,48595.71,698.26,52754.46,7759.99,38655.39,3356.75,47892.19,27315.64];
+		var all = 73868.74;
+
+		// var data = [1,2,3,4,5,6,7,8,9]
+		// var all = 14
+		
+		function sortNumber(a,b)
+		{
+			return a - b 
+		}
+		//排序后的数据
+		var data1 = data.sort(sortNumber)
+		console.log(data1)
+
+		var index;
+		var plus = 0;
+		var difference = [];
+		//先判断最多多少个数相加以及此时相差多少
+		for(var i = 0;  i  < data1.length ; i++) {
+			
+			plus = data1[i] + plus;
+
+			if(plus >= all) {
+				//difference[i] = Math.abs(all -plus)
+				index = (i+1);
+				break
+
+			}
+
+			
+		}
+		console.log(index)
+
+		
+		// var a;
+		// var b;
+		//写一个函数，传入一个数组，返回一个最小的值
+		var z = 0;
+
+
+		var arr1 = 0;
+		var newRes;
+
+		for(var a = 0; a <data1.length; a++) {
+			for(var b =  a+1; b < data1.length; b++) {
+					difference[z] = Math.abs(all - (data1[a] + data1[b]));
+					z++;
+				// 	newRes = Math.abs(all-(data1[i]+data1[j]))
+				// 	if(arr1 == 0){
+    //             		arr1 = newRes;
+    //         		}else{
+    //             		if(newRes-arr1<=0){
+    //                 		arr1 = newRes
+    //                 		console.log(data1[i],data1[j])
+    //             	}
+
+				// }
+				
+			// }
+		}
+	}
+	//console.log(arr1)
+
+		//difference[1] = diff.sort(sortNumber)[0];
+
+
+		for(var a = 0; a <data1.length; a++) {
+			for(var b = a+1; b < data1.length; b++) {
+
+				// if(a != b) {
+					for(var c = b+1; c < data1.length; c++) {
+						// if(a != b != c) {
+							difference[z] = Math.abs(all - (data1[a] + data1[b] +data1[c]) );
+							z++;
+					// 	}
+					// }
+				}
+				
+			}
+		}
+
+		
+
+
+		for(var a = 0; a <data1.length; a++) {
+			for(var b = a+1; b < data1.length; b++) {
+
+				// if(a != b) {
+					for(var c = b+1; c < data1.length; c++) {
+						//if(a != b != c) {
+							for(var d = c+1; d < data1.length; d++) {
+								//if(a != b != c != d) {
+								difference[z] = Math.abs(all - (data1[a] + data1[b] +data1[c] +data1[d]) );
+									z++;
+						// 		}
+						// 	}
+							
+						// }
+					}
+				}
+				
+			}
+		}
+
+
+
+for(var a = 0; a <data1.length; a++) {
+			for(var b = a+1; b < data1.length; b++) {
+
+				//if(a != b) {
+					for(var c = b+1; c < data1.length; c++) {
+						//if(a != b != c) {
+							for(var d = c+1; d < data1.length; d++) {
+								//if(a != b != c != d) {
+									for(var e = d+1 ; e < data1.length; e++) {
+										//if(a != b != c != d != e) {
+											difference[z] = Math.abs(all - (data1[a] + data1[b] +data1[c] +data1[d]+data1[e]) );
+											z++;
+							// 			}
+							// 		}
+								
+							// 	}
+							// }
+							
+						}
+					}
+				}
+				
+			}
+		}
+
+
+
+// for(var a = 0; a <data1.length; a++) {
+// 			for(var b = 0; b < data1.length; b++) {
+
+// 				if(a != b) {
+// 					for(var c = 0; c < data1.length; c++) {
+// 						if(b != c) {
+// 							for(var d = 0; d < data1.length; d++) {
+// 								if(c != d) {
+// 									for(var e = 0 ; e < data1.length; e++) {
+// 										if(d != e) {
+// 											for(var f = 0; f < data1.length; f++) {
+// 												if(e != f) {
+// 													difference[z] = Math.abs(all - (data1[a] + data1[b] +data1[c] +data1[d]+data1[e]+data1[f]) );
+// 													z++;
+// 												}
+// 											}
+											
+// 										}
+// 									}
+								
+// 								}
+// 							}
+							
+// 						}
+// 					}
+// 				}
+				
+// 			}
+// 		}
+
+
+
+var data2 = difference.sort(sortNumber)
+console.log(data2)
+		
+
+
+
+
+	</script>
+</body>
+</html>
